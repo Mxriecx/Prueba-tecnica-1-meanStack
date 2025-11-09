@@ -1,0 +1,67 @@
+.filtro-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.empleado-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.empleado-card:hover {
+  transform: translateY(-4px);
+}
+
+.empleado-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.empleado-avatar {
+  width: 45px;
+  height: 45px;
+  background: #0078d4;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.departamento {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn-ver {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #0078d4;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn-ver:hover {
+  background: #005fa3;
+}

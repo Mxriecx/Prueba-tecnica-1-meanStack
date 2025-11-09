@@ -1,0 +1,69 @@
+
+<div class="container mt-4">
+
+  <h2 class="mb-3">Gestión de Empleados</h2>
+
+  <!-- FORMULARIO -->
+  <form [formGroup]="registerForm" (ngSubmit)="modoEditar ? actualizarEmpleado() : enviarEmpleado()">
+
+    <div class="row">
+      <div class="col-md-6">
+        <input class="form-control mt-2" formControlName="codigo" placeholder="Código">
+      </div>
+      <div class="col-md-6">
+        <input class="form-control mt-2" formControlName="nombre" placeholder="Nombre">
+      </div>
+      <div class="col-md-6">
+        <input class="form-control mt-2" formControlName="primerApellido" placeholder="Primer Apellido">
+      </div>
+      <div class="col-md-6">
+        <input class="form-control mt-2" formControlName="segundoApellido" placeholder="Segundo Apellido">
+      </div>
+      <div class="col-md-12">
+        <select class="form-control mt-2" formControlName="departamento">
+          <option disabled value="">Seleccione departamento</option>
+          <option>Workforce</option>
+          <option>Training</option>
+          <option>Customer Experience</option>
+          <option>Operations</option>
+          <option>HR</option>
+          <option>Finances</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn btn-success mt-3" type="submit" *ngIf="!modoEditar">Guardar</button>
+    <button class="btn btn-primary mt-3" type="submit" *ngIf="modoEditar">Actualizar</button>
+  </form>
+
+  <hr>
+
+  <!-- TABLA -->
+  <table class="table table-bordered mt-3">
+    <thead class="table-dark">
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Departamento</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{emp.codigo}}</td>
+        <td>{{emp.nombre}}</td>
+        <td>{{emp.primerApellido}}</td>
+        <td>{{emp.segundoApellido}}</td>
+        <td>{{emp.departamento}}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" (click)="editar(emp)">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="borrar(emp._id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

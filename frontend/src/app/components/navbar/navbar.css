@@ -1,0 +1,62 @@
+.navbar {
+  background: linear-gradient(90deg, #4CAF50, #2196F3);
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #e3f2fd !important;
+}
+
+/* Enlaces del menú */
+.nav-link {
+  color: #f0f0f0 !important;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+}
+
+/* Link activo */
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Toggler (versión móvil) */
+.navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Versión móvil */
+@media (max-width: 992px) {
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

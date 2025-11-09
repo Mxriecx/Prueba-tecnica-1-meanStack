@@ -1,0 +1,113 @@
+.container {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Formulario */
+form {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+input.form-control,
+select.form-control {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+input.form-control:focus,
+select.form-control:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Botones */
+button.btn {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.btn-success {
+  background-color: #4CAF50;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #43a047;
+}
+
+.btn-primary {
+  background-color: #2196F3;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1976D2;
+}
+
+.btn-warning {
+  background-color: #FFC107;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #FFB300;
+}
+
+.btn-danger {
+  background-color: #F44336;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #D32F2F;
+}
+
+/* Tabla */
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+}
+
+.table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  button.btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
